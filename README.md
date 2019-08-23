@@ -1,7 +1,7 @@
 # Digital-Signal-Processing
 A computer method by MATLAB
 
-[![LICENSE](https://img.shields.io/badge/license-MIT)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
 
 
 ### Introduction to MATLAB
