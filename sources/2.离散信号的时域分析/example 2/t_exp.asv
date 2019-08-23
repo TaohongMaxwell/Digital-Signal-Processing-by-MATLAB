@@ -1,0 +1,6 @@
+clf;
+x=2*(-1)exp.^n;
+stem(n,x);
+xlabel('time index n');
+ylabel('amplitude');
+grid on;
