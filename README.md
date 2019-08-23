@@ -1,6 +1,9 @@
 # Digital-Signal-Processing
 A computer method by MATLAB
 
+[![LICENSE](https://img.shields.io/badge/license-MIT)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
+
+
 ### Introduction to MATLAB
 
 MATLAB is a high-performance scientific and engineering calculation software developed by MathWorks, USA. It has a wide range of applications in numerical computing, automatic control, signal processing, neural networks, optimization calculations, wavelet analysis, image processing and other fields. In recent years, the application of MATLAB in domestic universities and research institutes has gradually become popular, and it has become one of the necessary tools for scientific research and engineering technicians. MATLAB has the advantages of convenient matrix and array operation, high programming efficiency, easy to learn and use, strong expandability and good portability. It is commonly known as the “scientific computing language of draft paper”. It frees engineers from cumbersome code and can quickly validate their models and algorithms.
