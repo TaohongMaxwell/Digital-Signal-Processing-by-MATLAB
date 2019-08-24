@@ -51,18 +51,22 @@ reference:
 
 For a speech signal, a few seconds are intercepted and saved in the form of ".wav", and the voice signal is read, waveform display, and the like.
 
-Reference: For a section of the "C:\MATLAB6p5\work\speech\" voice signal "f3.wav", proceed:
+Reference: For a section of the `"C:\MATLAB6p5\work\speech\"` voice signal `"f3.wav"`, proceed:
 
-x=('C:\MATLAB6p5\work\speech\f3.wav');y=wavread(x);plot(y); sound(y,16000)
+```matlab
+x=('C:\MATLAB6p5\work\speech\f3.wav');
+y=wavread(x);plot(y);
+sound(y,16000)
+```
 
 ## Experimental content:
 
 1. Generate a unit step signal (using the ones function)
-2. Generate an exponential sequence x(n).
+2. Generate an exponential sequence `x(n)`.
 3. Generate a periodic sine function.
 4. Given that:
-x[n]={-4 5 1 -2 -3 0 2}, -4<n<4;
-y[n]={6 -3 -1 0 8 7 -2}; -2<n<6;
-Programming calculates the inner product of x[n-1] and y[-n]
-5. Find y[n]=a[n]*b[n] to program the convolution of the two causal discrete signals.
+`x[n]={-4 5 1 -2 -3 0 2}`, -4<n<4;
+`y[n]={6 -3 -1 0 8 7 -2}`, -2<n<6;
+Programming calculates the inner product of `x[n-1]` and `y[-n]`
+5. Find `y[n]=a[n]*b[n]` to program the convolution of the two causal discrete signals.
 

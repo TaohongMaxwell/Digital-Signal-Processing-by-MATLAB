@@ -41,13 +41,13 @@ A simple reference for a nonlinear discrete-time system:
 
 ## Thinking questions
 
-(1) What are the characteristics of discrete time systems?
-(2) Summarize the conclusions obtained during the experiment and analyze them.
-(3) Analyze the problems involved in the experiment, try to compile and modify the corresponding procedures, and get the final correct results and waveform diagrams, and analyze and analyze the experimental reports.
-(4) Through MATLAB simulation, the discrete time system is studied, and the linear, nonlinear, time-varying, non-time-varying systems are simulated.
+1. What are the characteristics of discrete time systems?
+2. Summarize the conclusions obtained during the experiment and analyze them.
+3. Analyze the problems involved in the experiment, try to compile and modify the corresponding procedures, and get the final correct results and waveform diagrams, and analyze and analyze the experimental reports.
+4. Through MATLAB simulation, the discrete time system is studied, and the linear, nonlinear, time-varying, non-time-varying systems are simulated.
 
 ## Experimental report requirements:
 
-(1) Defining the purpose of the experiment and the principle of the experiment.
-(2) Analyze the properties of discrete time signals through experimental content.
-(3) Complete the content of the thinking questions, analyze and contrast the experimental results and their waveforms, and summarize the main conclusions.
+1. Defining the purpose of the experiment and the principle of the experiment.
+2. Analyze the properties of discrete time signals through experimental content.
+3. Complete the content of the thinking questions, analyze and contrast the experimental results and their waveforms, and summarize the main conclusions.

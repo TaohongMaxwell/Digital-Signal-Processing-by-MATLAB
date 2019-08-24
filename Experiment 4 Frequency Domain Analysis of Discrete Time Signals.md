@@ -31,7 +31,7 @@ DTFT is a Fourier analysis of arbitrary sequences, its spectrum is a continuous 
 
 **Reference 1:** Calculate the discrete time Fourier transform and draw the graph.
 
-The finite length sequence x(n) = {1, 2, 3, 4, 5} is known.
+The finite length sequence `x(n) = {1,2,3,4,5}` is known.
 
 ```matlab
 n=-1:3; x=1:5; k=0:500; w=(pi/500)*k; X=x*(exp(-j*2*pi/500)).^(n '*k);
@@ -75,7 +75,7 @@ Xlabel('\omega /\pi'); ylabel('Phase in radians');
 
 **(3) Familiar with the concept of discrete Fourier transform and its properties**
 
-**Reference 1:** x(n)=sin(n*pi/8)+sin(n*pi/4) is a sequence of N=16, and its Fourier transform is calculated.
+**Reference 1:** $x(n)=sin(n * \frac \pi 8)+sin(n * \frac \pi 4)$ is a sequence of N=16, and its Fourier transform is calculated.
 
 ```matlab
 N=16; n=0: N-1; xn=sin(n*pi/8)+sin(n*pi/4); k=0:1:N-1;
@@ -85,7 +85,7 @@ Subplot(2,1,1);stem(n,xn);subplot(2,1,2);stem(k,abs(Xk));
 
 
 
- **Reference 2:** Calculate x(n)=8*(0.4).^n, where n is a circular shift of [0,20).
+ **Reference 2:** Calculate $x(n)=8*(0.4)^n$ , where n is a circular shift of [0,20).
 
 ```matlab
 N=20; m=10; n=0:1: N-1; x=8*(0.4).^n;
@@ -98,8 +98,8 @@ Title('circular shift equence');xlabel('n');ylabel('x((n+10))mod 20');
 ## Thinking questions
 
 1. Understand the frequency domain analysis of discrete time systems, master and deepen the understanding of the Fourier transform and its properties.
-2. Calculate a discrete time Fourier transform of the sequence x(n)=cos(n*pi/6) of N=12.
-3. Find x1(n)=(0.8).^n, where n belongs to [0,10] and x2(n)=(0.6).^n, and n belongs to the circular convolution of [0,18] N=20). First construct a function that computes the circular convolution for calculation.
+2. Calculate a discrete time Fourier transform of the sequence $x(n)=cos(n* \frac \pi 6)$ of N=12.
+3. Find the circular convolution of $x_1(n)=(0.8)^n$, where n belongs to [0,10] and $x_2(n)=(0.6)^n$, where n belongs to N=20 of  [0,18]. First construct a function that computes the circular convolution for calculation.
 
 ## Experimental report requirements
 

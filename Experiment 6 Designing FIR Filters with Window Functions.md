@@ -19,7 +19,7 @@ In the time domain, a window function is used to intercept the ideal one, and th
 Let the ideal impulse's unit impulse response be . Take the low-pass linear phase FIR digital filter as an example.
 
 Generally infinitely long, non-causal, cannot be directly used as the unit impulse response of the FIR filter. To get a causal finite-length filter h(n), the most straightforward method is truncation, that is, truncation into a finite-length causal sequence, and weighting with a suitable window function as the unit impulse response of the FIR filter. According to the requirements of the linear phase filter, h(n) must be even symmetric. The center of symmetry must be equal to the delay constant of the filter, ie
-                                                   
+
 The FIR low-pass filter designed with a rectangular window, the amplitude function of the designed filter exhibits oscillation in both the passband and the stopband, and the maximum ripple is about 9% of the amplitude (the phenomenon is called Gibbs). effect).
 
 ### Typical window function
@@ -28,13 +28,13 @@ The FIR low-pass filter designed with a rectangular window, the amplitude functi
 
 Its frequency response and amplitude response are:
 
-Call w=boxcar(N) function in matlab, where N is the length of the window function
+That's `w=boxcar(N)` function in matlab, where N is the length of the window function
 
 #### (b) Bartlett Window
 
 Its frequency response is:
 
-Call w=triang(N) function in matlab, where N is the length of the window function
+That's `w=triang(N)` function in matlab, where N is the length of the window function
 
 #### (c) Hanning window,
 
@@ -42,7 +42,7 @@ also known as the raised cosine window
 
 Its frequency response and amplitude response are:
 
-Call w=hanning(N) function in matlab, where N is the length of the window function
+That's `w=hanning(N)` function in matlab, where N is the length of the window function
 
 #### (d) Hamming window,
 
@@ -50,7 +50,7 @@ also known as the improved raised cosine window
 
 The magnitude response is:
 
-Call w=hamming(N) function in matlab, where N is the length of the window function
+That's `w=hamming(N)` function in matlab, where N is the length of the window function
 
 #### (e) Blankman window,
 
@@ -58,17 +58,17 @@ also known as second-order raised cosine window
 
 The magnitude response is:
 
-Call w=blackman(N) function in matlab, where N is the length of the window function
+That's `w=blackman(N)` function in matlab, where N is the length of the window function
 
 #### (f) Kaiser window
 
 Where: β is an optional parameter used to select the exchange relationship between the main lobe width and the side lobe attenuation. In general, the larger β, the wider the transition band, and the smaller the stop band, the greater the attenuation. I0(·) is the first type of modified zero-order Bessel function.
 
-Call w=kaiser(N,beta) in matlab, function N is the length of the window function, and beta is the parameter of the window function.
+That's `w=kaiser(N,beta)` in matlab, function N is the length of the window function, and beta is the parameter of the window function.
 
 ### The specific steps of designing the FIR filter using the window function are as follows:
 
-1. According to the specific performance requirements, select the appropriate window function by analyzing the parameters such as the transition band width Δω and the stopband attenuation AS, and estimate the length N of the filter.
+1. According to the specific performance requirements, select the appropriate window function by analyzing the parameters such as the transition band width Δω and the stopband attenuation A~S~, and estimate the length N of the filter.
 2. Find the ideal unit impulse response from the amplitude-frequency response parameters of the given filter.
 3. Determine the delay value and calculate the unit sampling response of the filter.
 4. Verify that the technical indicators meet the requirements. Analyze the amplitude-frequency characteristics of the designed filter.
@@ -93,9 +93,8 @@ The passband boundary frequency, the stopband boundary frequency, the stopband a
 
 According to the requirements of the filter, the stopband attenuation is not less than 40 dB, and the Hanning window is selected.
 
-%FIR filter based on window function
-
 ```matlab
+%FIR filter based on window function
 Wp=0.5*pi; ws=0.66*pi; % performance index
 Wdelta=ws-wp; % transition band width
 N=ceil(3.11*pi/wdelta) % filter length
@@ -108,7 +107,11 @@ Freqz(b,1,512)
 % is the frequency response. The numerator is b and the denominator is 1
 ```
 
+
+
 The experimental results are shown in the figure:
+
+
 
 ### Example 2:
 
@@ -124,9 +127,9 @@ It is required to design a multi-band filter: its amplitude response is 0 at 0 t
 
 **reference:**
 
-% multi-band filter design
 
 ```matlab
+% multi-band filter design
 f=[0 0.125 0.125 0.250 0.250 0.500 0.500 0.750 0.750 1.00];
 m=[1 1 0.5 0.5 0.25 0.25 1/6 1/6 0.125 0.125];
 b=fir2(60,f,m);
@@ -135,6 +138,8 @@ Plot(f,m,w/pi,abs(h))
 Grid on;
 Legend('‘Ideal Filter', 'Design Filter');
 ```
+
+
 ## Filter Design & Analysis Tools
 
 In addition, there is a more intuitive way to design filters, using Filter Design & Analysis Tools in MATLAB to design filters is more intuitive.
@@ -153,7 +158,7 @@ Then set the sampling frequency and cutoff frequency, then click Design Fliter t
 
 1. How the window length and shape affect the filter performance during the experiment.
 
-2. Using a window function method to design a linear phase FIR low-pass filter, the performance indicators are: passband cutoff frequency is 0.2pi, band stop cutoff frequency is 0.3pi, stopband attenuation is not less than 40dB, passband attenuation is not more than 3dB . Write a program implementation and draw graphics.
+2. Using a window function method to design a linear phase FIR low-pass filter, the performance indicators are: passband cutoff frequency is 0.2π, band stop cutoff frequency is 0.3π, stopband attenuation is not less than 40dB, passband attenuation is not more than 3dB . Write a program implementation and draw graphics.
 
 3. Design a band-stop filter with a band resistance of 0.4 to 0.65 and an order of 34, and use a Chebyshev window and compare it with the default window function.
 
