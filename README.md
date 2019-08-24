@@ -33,6 +33,14 @@ Through the experiment of this repository, students are required to use MATLAB p
 - Method of analyzing problems in Digital Signal Processing
 - etc
 
+## Contents
+
+ [Experiment 1 Basic operation and processing of signals.md](Experiment 1 Basic operation and processing of signals.md) 
+
+ [Experiment 2 Time domain analysis of discrete signals.md](Experiment 2 Time domain analysis of discrete signals.md) 
+
+ [Experiment 3 Time domain analysis of discrete time systems.md](Experiment 3 Time domain analysis of discrete time systems.md) 
+
 ## Author
 
 **Maxwell Tao** , an **Electronic Science and Technology** student studied at [**Guilin University of Electronic Technology**](http://www.guet.edu.cn/).
