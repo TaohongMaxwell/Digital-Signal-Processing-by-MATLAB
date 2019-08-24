@@ -2,9 +2,19 @@
 
 A computer method by MATLAB
 
-**📕[Contenets](#Contents)**
+![](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)[![](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) [![](https://img.shields.io/badge/Language-English-blue)](./README.md)
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
+
+## Contenets
+
+- [Introduction](#Introduction)
+- [Why MATLAB](#Why MATLAB)
+- [What's you can see](#What's you can see)
+- [What's you can learn](#What's you can learn)
+- [Details](#Details)
+- [Author](#Author)
+- [Feedback](#Feedback)
+- [References](#References)
 
 ## Introduction
 
@@ -12,7 +22,7 @@ This repository is aim to help students major in Communication / Information / E
 
 It is written purely in MATLAB language.
 
-## MATLAB
+## Why MATLAB
 
 MATLAB is a high-performance scientific and engineering calculation software developed by MathWorks, USA. It has a wide range of applications in numerical computing, automatic control, signal processing, neural networks, optimization calculations, wavelet analysis, image processing and other fields.
 
@@ -35,7 +45,7 @@ Through the experiment of this repository, students are required to use MATLAB p
 - Method of analyzing problems in Digital Signal Processing
 - etc
 
-## Contents
+## Details
 
 - Experiences
   - [Experiment 1 Basic Operation and Processing of Signals](./Experiment%201%20Basic%20operation%20and%20processing%20of%20signals.md)
