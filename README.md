@@ -11,8 +11,8 @@ A computer method by MATLAB
 
 - [Introduction](#Introduction)
 - [Why MATLAB](#Why-MATLAB)
-- [What's you can see](#What's-you-can-see:)
-- [What's you can learn](#What's-you-can-learn:)
+- [What's-you-can-see](#What's-you-can-see:)
+- [What's-you-can-learn](#What's-you-can-learn:)
 - [Details](#Details)
 - [Author](#Author)
 - [Feedback](#Feedback)
