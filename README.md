@@ -2,15 +2,17 @@
 
 A computer method by MATLAB
 
-![](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)[![](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) [![](https://img.shields.io/badge/Language-English-blue)](./README.md)
-
+![](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
+[![](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
+[![](https://img.shields.io/badge/Language-English-blue)](./README.md)
 
 ## Contenets
 
 - [Introduction](#Introduction)
 - [Why MATLAB](#Why MATLAB)
-- [What's you can see](#What's you can see)
-- [What's you can learn](#What's you can learn)
+- [What's you can see](#What's you can see:)
+- [What's you can learn](#What's you can learn:)
 - [Details](#Details)
 - [Author](#Author)
 - [Feedback](#Feedback)
