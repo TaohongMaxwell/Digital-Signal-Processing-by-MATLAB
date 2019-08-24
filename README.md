@@ -10,9 +10,9 @@ A computer method by MATLAB
 ## Contenets
 
 - [Introduction](#Introduction)
-- [Why MATLAB](#Why MATLAB)
-- [What's you can see](#What's you can see:)
-- [What's you can learn](#What's you can learn:)
+- [Why MATLAB](#Why-MATLAB)
+- [What's you can see](#What's-you-can-see:)
+- [What's you can learn](#What's-you-can-learn:)
 - [Details](#Details)
 - [Author](#Author)
 - [Feedback](#Feedback)
@@ -24,7 +24,7 @@ This repository is aim to help students major in Communication / Information / E
 
 It is written purely in MATLAB language.
 
-## Why MATLAB
+## Why-MATLAB
 
 MATLAB is a high-performance scientific and engineering calculation software developed by MathWorks, USA. It has a wide range of applications in numerical computing, automatic control, signal processing, neural networks, optimization calculations, wavelet analysis, image processing and other fields.
 
@@ -36,12 +36,12 @@ The main feature of MATLAB is its powerful matrix computing power and simulation
 
 Through the experiment of this repository, students are required to use MATLAB programming to complete some basic functions of digital signal processing, and deepen the understanding of the content of signal processing theory courses. Gradually develop students' ability to use their knowledge to analyze and solve problems.
 
-## What's you can see:
+## What's-you-can-see:
 
 - Some demos of Digital Signal Processing by MATLAB programming
 - Some analysis of typical operations
 
-## What's you can learn:
+## What's-you-can-learn:
 
 - MATLAB tips
 - Method of analyzing problems in Digital Signal Processing
