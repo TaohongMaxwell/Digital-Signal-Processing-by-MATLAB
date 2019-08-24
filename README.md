@@ -20,9 +20,9 @@ A computer method by MATLAB
 
 ## Introduction
 
-This repository is aim to help students major in Communication / Information / Electronic / Computer / AI learn and practice the computer method for Digital Signal Processing.
+This repository is aim to help students major in Communication / Information / Electronic / Computer / AI learn and practice the computer method for Digital Signal Processing. It is written purely in MATLAB language.
 
-It is written purely in MATLAB language.
+(Need to improve)
 
 ## Why-MATLAB
 
