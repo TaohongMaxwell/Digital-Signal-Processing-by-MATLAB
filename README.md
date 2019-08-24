@@ -11,8 +11,8 @@ A computer method by MATLAB
 
 - [Introduction](#Introduction)
 - [Why MATLAB](#Why-MATLAB)
-- [What's-you-can-see](#What's-you-can-see:)
-- [What's-you-can-learn](#What's-you-can-learn:)
+- What's you can see
+- What's you can learn
 - [Details](#Details)
 - [Author](#Author)
 - [Feedback](#Feedback)
@@ -36,12 +36,12 @@ The main feature of MATLAB is its powerful matrix computing power and simulation
 
 Through the experiment of this repository, students are required to use MATLAB programming to complete some basic functions of digital signal processing, and deepen the understanding of the content of signal processing theory courses. Gradually develop students' ability to use their knowledge to analyze and solve problems.
 
-## What's-you-can-see:
+## What's you can see:
 
 - Some demos of Digital Signal Processing by MATLAB programming
 - Some analysis of typical operations
 
-## What's-you-can-learn:
+## What's you can learn:
 
 - MATLAB tips
 - Method of analyzing problems in Digital Signal Processing
