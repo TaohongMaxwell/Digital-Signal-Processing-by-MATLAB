@@ -46,7 +46,7 @@ Through the experiment of this repository, students are required to use MATLAB p
   - [Experiment 6 Designing FIR Filters with Window Functions](./Experiment%206%20Designing%20FIR%20Filters%20with%20Window%20Functions.md)
   - [Experiment 7 Comprehensive Experiment](./Experiment%207%20Comprehensive%20experiment.md)
 - Demos
-  - [Demo 1 Design digital filters to filter out-of-band noise](./Demo%201%20Design%20digital%20filters%20to%20filter%20out-of-band%20noise.md)
+  - [Demo 1 Design digital filters to filter out-of-band noise](./demos/Demo%201%20Design%20digital%20filters%20to%20filter%20out-of-band%20noise.md)
 
 ## Author
 
