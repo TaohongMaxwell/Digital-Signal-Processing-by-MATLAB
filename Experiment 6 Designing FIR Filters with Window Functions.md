@@ -1,9 +1,11 @@
-## Experiment 6 Designing FIR Filters with Window Functions
+# Experiment 6 Designing FIR Filters with Window Functions
 
 ## Experimental purpose
 
 1. Familiar with the methods and principles of FIR filter design.
+
 2. Master the method and principle of designing FIR filter by window function method, and be familiar with the characteristics of filter.
+
 3. Understand the effects of various window function filter characteristics.
 
 ## Experimental principle

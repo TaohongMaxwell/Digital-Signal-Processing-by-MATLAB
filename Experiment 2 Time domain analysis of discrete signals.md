@@ -1,4 +1,4 @@
-# Experiment 2 Time domain analysis of discrete signals
+# Experiment 2 Time Domain Analysis of Discrete Signals
 
 ## Experimental purpose:
 

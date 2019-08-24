@@ -2,6 +2,8 @@
 
 A computer method by MATLAB
 
+[Contenets](#Contents)
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
 
 ## Introduction
@@ -35,11 +37,19 @@ Through the experiment of this repository, students are required to use MATLAB p
 
 ## Contents
 
-[Experiment 1 Basic operation and processing of signals.md](https://github.com/TaohongMaxwell/Digital-Signal-Processing/blob/master/Experiment%201%20Basic%20operation%20and%20processing%20of%20signals.md)
+- [Experiment 1 Basic Operation and Processing of Signals](./Experiment%201%20Basic%20operation%20and%20processing%20of%20signals.md)
 
-[Experiment 2 Time domain analysis of discrete signals.md](./Experiment%202%20Time%20domain%20analysis%20of%20discrete%20signals.md) 
+- [Experiment 2 Time Domain Analysis of Discrete Signals](./Experiment%202%20Time%20domain%20analysis%20of%20discrete%20signals.md) 
 
-[Experiment 3 Time domain analysis of discrete time systems.md](Experiment 3 Time domain analysis of discrete time systems.md) 
+- [Experiment 3 Time Domain Analysis of Discrete Time Systems](./Experiment%203%20Time%20domain%20analysis%20of%20discrete%20time%20systems.md) 
+
+- [Experiment 4 Frequency Domain Analysis of Discrete Time Signals](./Experiment%204%20Frequency%20Domain%20Analysis%20of%20Discrete%20Time%20Signals.md)
+
+- [Experiment 5 Design and Filtering of IIR Filters](./Experiment%205%20Design%20and%20Filtering%20of%20IIR%20Filters.md)
+
+- [Experiment 6 Designing FIR Filters with Window Functions](./Experiment%206%20Designing%20FIR%20Filters%20with%20Window%20Functions.md)
+
+- [Experiment 7 Comprehensive Experiment](./Experiment%207%20Comprehensive%20experiment.md)
 
 ## Author
 

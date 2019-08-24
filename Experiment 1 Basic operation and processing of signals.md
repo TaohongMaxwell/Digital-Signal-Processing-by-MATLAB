@@ -1,4 +1,4 @@
-# Experiment 1 Basic operation and processing of signals
+# Experiment 1 Basic Operation and Processing of Signals
 
 ## Experimental purpose:
 

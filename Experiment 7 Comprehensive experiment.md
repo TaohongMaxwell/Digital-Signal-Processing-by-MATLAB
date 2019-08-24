@@ -1,4 +1,4 @@
-# Experiment 7 Comprehensive experiment
+# Experiment 7 Comprehensive Experiment
 
 ## Experimental purpose
 

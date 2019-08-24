@@ -1,6 +1,6 @@
-# Experiment 3 Time domain analysis of discrete time systems
+# Experiment 3 Time Domain Analysis of Discrete Time Systems
 
-## Purpose
+## Experimental purpose
 
 1. A system for understanding discrete time signals and its characteristics.
 2. Analyze the simple discrete time system and study its time domain characteristics.

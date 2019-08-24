@@ -2,9 +2,9 @@
 
 ## Experimental purpose
 
-(1) Understand and deepen the concept of Fourier transform and its properties.
-(2) Calculation and basic properties of discrete time Fourier transform (DTFT).
-(3) Calculation and basic properties of Discrete Fourier Transform (DFT).
+1. Understand and deepen the concept of Fourier transform and its properties.
+2. Calculation and basic properties of discrete time Fourier transform (DTFT).
+3. Calculation and basic properties of Discrete Fourier Transform (DFT).
 
 ## Experimental principle
 

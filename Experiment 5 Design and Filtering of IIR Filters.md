@@ -1,10 +1,10 @@
 # Experiment 5 Design and Filtering of IIR Filters
 
-## Purpose
+## Experimental purpose
 
-(1) Deepen the understanding of signal sampling,
-(2) Master the method of filter design;
-(3) Review the design of the low-pass filter.
+1. Deepen the understanding of signal sampling,
+2. Master the method of filter design;
+3. Review the design of the low-pass filter.
 
 ## Experimental principle
 
