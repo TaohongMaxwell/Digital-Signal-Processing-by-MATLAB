@@ -7,16 +7,7 @@
 [![Chinese version](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
 [![English version](https://img.shields.io/badge/Language-English-blue)](./README.md)
 
-## 目录
-
-- 简介
-- 为何选择 MATLAB
-- 你能了解到
-- 你能学习到
-- [详细资料](#Details)
-- 关于作者
-- 反馈
-- 参考
+[TOC]
 
 ## 简介
 

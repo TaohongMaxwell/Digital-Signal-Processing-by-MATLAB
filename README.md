@@ -9,17 +9,6 @@ A computer method by MATLAB
 
 [TOC]
 
-## Contenets
-
-- [Introduction](#Introduction)
-- [Why MATLAB](#Why-MATLAB)
-- What's you can see
-- What's you can learn
-- [Details](#Details)
-- [Author](#Author)
-- [Feedback](#Feedback)
-- [References](#References)
-
 ## Introduction
 
 This repository is aim to help students major in Communication / Information / Electronic / Computer / AI learn and practice the computer method for Digital Signal Processing. It is written purely in MATLAB language.
