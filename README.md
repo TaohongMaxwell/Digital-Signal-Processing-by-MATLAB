@@ -11,11 +11,9 @@ A computer method by MATLAB
 
 ## Introduction
 
-This repository is aim to help students major in Communication / Information / Electronic / Computer / AI learn and practice the computer method for Digital Signal Processing. It is written purely in MATLAB language.
+This project aims to help Communication/Telecom/Electronic/Computer/Artificial Intelligence students learn and practice computer methods for digital signal processing. It is suitable for theoretical research such as signal processing and analysis. It is written purely in MATLAB language.
 
-(Need to improve)
-
-## Why-MATLAB
+## Why MATLAB
 
 MATLAB is a high-performance scientific and engineering calculation software developed by MathWorks, USA. It has a wide range of applications in numerical computing, automatic control, signal processing, neural networks, optimization calculations, wavelet analysis, image processing and other fields.
 
@@ -27,16 +25,7 @@ The main feature of MATLAB is its powerful matrix computing power and simulation
 
 Through the experiment of this repository, students are required to use MATLAB programming to complete some basic functions of digital signal processing, and deepen the understanding of the content of signal processing theory courses. Gradually develop students' ability to use their knowledge to analyze and solve problems.
 
-## What's you can see:
-
-- Some demos of Digital Signal Processing by MATLAB programming
-- Some analysis of typical operations
-
-## What's you can learn:
-
-- MATLAB tips
-- Method of analyzing problems in Digital Signal Processing
-- etc
+In this repository, you can browse some examples of digital signal processing using MATLAB, as well as the typical analysis and operation flow of these examples, and then learn some skills of MATLAB operation skills and methods for analyzing problems.
 
 ## Details
 
@@ -53,7 +42,7 @@ Through the experiment of this repository, students are required to use MATLAB p
 
 ## Author
 
-**Maxwell Tao** , an **Electronic Science and Technology** student studied at [**Guilin University of Electronic Technology**](http://www.guet.edu.cn/).
+**Maxwell Tao** , an Electronic Science and Technology student study at Guilin University of Electronic Technology.
 
 Now I am one of the chelf editors in WeChat public account of the Media Department of the Youth League New Media Alliance Studio of GUET (GUET Youth, 青春桂电). I was a web engineer in the Technical Department of the New Media Center of the School of Information and Communication.
 
