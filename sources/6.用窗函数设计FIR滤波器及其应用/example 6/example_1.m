@@ -12,4 +12,5 @@ b=fir1(Nw-1,wc/pi,win) %fir1是基于加窗的线性相位FIR数字滤波器设计函数。N-1为滤波
 freqz(b,1,512)          %为求取频率响应。分子为b，分母为1
 [h,w]=freqz(b,1,512);
 figure('Name','Filter of example_1');plot(w,abs(h));
+
 prove_1;

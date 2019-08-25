@@ -62,3 +62,6 @@ A discrete signal x of length 100 is known, consisting mainly of signals of thre
 
 7. A summary of the experience of this experiment, as well as a summary of the experiments on the signal processing course.
 
+## Reference programme
+
+see here: [`main.m`](./sources/7.综合实验/example%207/main.m)

@@ -10,4 +10,5 @@ b=fir1(N,[w1,w2],'stop',win);
 freqz(b,1,512)
 [h,w]=freqz(b,1,512);
 figure('Name','Filter of t_3');plot(w,abs(h));
+
 prove_t_3;

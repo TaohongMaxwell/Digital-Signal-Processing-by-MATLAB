@@ -93,25 +93,38 @@ The passband boundary frequency, the stopband boundary frequency, the stopband a
 
 According to the requirements of the filter, the stopband attenuation is not less than 40 dB, and the Hanning window is selected.
 
+FIR filter based on window function:
+
+[`example_1.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\example_1.m)
+
 ```matlab
-%FIR filter based on window function
+clc;clear;close all;
+
 Wp=0.5*pi; ws=0.66*pi; % performance index
 Wdelta=ws-wp; % transition band width
 N=ceil(3.11*pi/wdelta) % filter length
 Nw=2*N+1; % window length
 Wc=(ws+wp)/2; % cutoff frequency
 Win=hanning(Nw); %Han window's time domain response
+
 b=fir1(Nw -1, wc/pi, win)
-%fir1 is a windowed linear phase FIR digital filter design function. N-1 is the order of the filter. Win is a window function, which is a column vector of length N. By default, the function automatically takes hamming.
+%fir1 is a windowed linear phase FIR digital filter design function.
+% N-1 is the order of the filter.
+% Win is a window function, which is a column vector of length N.
+% By default, the function automatically takes hamming.
+
 Freqz(b,1,512)
-% is the frequency response. The numerator is b and the denominator is 1
+% is the frequency response.
+% The numerator is b and the denominator is 1
 ```
 
+We also can write a programme to prove if this filter work correctly,  see:
 
+[`prove_1.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\prove_1.m)
 
 The experimental results are shown in the figure:
 
-
+`(Need to be done)`
 
 ### Example 2:
 
@@ -127,9 +140,11 @@ It is required to design a multi-band filter: its amplitude response is 0 at 0 t
 
 **reference:**
 
+Multi-band filter design:
+
+[`example_2.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\example_2.m)
 
 ```matlab
-% multi-band filter design
 f=[0 0.125 0.125 0.250 0.250 0.500 0.500 0.750 0.750 1.00];
 m=[1 1 0.5 0.5 0.25 0.25 1/6 1/6 0.125 0.125];
 b=fir2(60,f,m);
@@ -139,32 +154,76 @@ Grid on;
 Legend('‘Ideal Filter', 'Design Filter');
 ```
 
+We also can write a programme to prove if this filter work correctly,  see:
+
+[`prove_2.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\prove_2.m)
 
 ## Filter Design & Analysis Tools
 
-In addition, there is a more intuitive way to design filters, using Filter Design & Analysis Tools in MATLAB to design filters is more intuitive.
+In addition, there is a more intuitive way to design filters, using `Filter Design & Analysis Tools` in MATLAB to design filters is more intuitive.
 
-The Fliter Type selects a low pass, high pass, band pass or band stop filter.
+The Fliter Type selects a `low pass`, `high pass`, `band pass` or `band stop` filter.
 
-The Design Method selects the IIR or the FIR filter. The drop-down menu selects the type, and the window type is used in the program.
+The Design Method selects the `IIR` or the `FIR` filter. The drop-down menu selects the type, and the `window` type is used in the program.
 
-Fliter Order selects the order of the filter.
+`Fliter Order` selects the order of the filter.
 
-Windows Specifications is the selection window function type.
+`Windows Specifications` is the selection window function type.
 
-Then set the sampling frequency and cutoff frequency, then click Design Fliter to complete the design.
+Then set the sampling frequency and cutoff frequency, then click `Design Fliter` to complete the design.
 
 ## Thinking question
 
 1. How the window length and shape affect the filter performance during the experiment.
 
+When the FIR filter is designed by window method, the length of the window affects the transition bandwidth of the filter: The longer the length of the window, the narrower and steeper the transition band of the filter.
+
 2. Using a window function method to design a linear phase FIR low-pass filter, the performance indicators are: passband cutoff frequency is 0.2π, band stop cutoff frequency is 0.3π, stopband attenuation is not less than 40dB, passband attenuation is not more than 3dB . Write a program implementation and draw graphics.
 
+[`t_2.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\t_2.m)
+
+```matlab
+clc;clear;close all;
+
+wp=0.2*pi;ws=0.3*pi;    %性能指标
+wdelta=ws-wp;           %过渡带宽度
+N=ceil(3.11*pi/wdelta)  %滤波器长度
+Nw=2*N+1;               %窗口长度
+wc=(ws+wp)/2;           %截止频率
+win=hanning(Nw);        %汉宁窗的时域响应
+
+b=fir1(Nw-1,wc/pi,win)
+% fir1是基于加窗的线性相位FIR数字滤波器设计函数。
+% N-1为滤波器的阶数。
+% Win为窗函数，是长度为N的列向量，默认是函数自动取hamming。
+
+freqz(b,1,512)          %为求取频率响应。分子为b，分母为1
+[h,w]=freqz(b,1,512);
+figure('Name','Filter of t_2');plot(w,abs(h));
+
+prove_t_2;
+```
+
 3. Design a band-stop filter with a band resistance of 0.4 to 0.65 and an order of 34, and use a Chebyshev window and compare it with the default window function.
+
+[`t_3.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\t_3.m)
+
+```matlab
+clc;clear;close all;
+
+w1=0.4; w2=0.65;
+alpha=40; N=34;
+win=chebwin(N+1,alpha);
+b=fir1(N,[w1,w2],'stop',win);
+freqz(b,1,512)
+[h,w]=freqz(b,1,512);
+figure('Name','Filter of t_3');plot(w,abs(h));
+
+prove_t_3;
+```
 
 ## Experimental report requirements
 
 1. Defining the purpose of the experiment and the principle of the experiment.
 2. Learn more about the filter design method through the experimental content.
 3. Complete the content of the thinking questions, analyze and contrast the experimental results and their waveforms, and summarize the main conclusions.
-
