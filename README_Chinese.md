@@ -2,10 +2,10 @@
 
 一种基于计算机的方法，以 MATLAB 为工具。
 
-![](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)
+[![Maxwell Blog](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)](https://taohongmaxwell.github.io/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
-[![](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
-[![](https://img.shields.io/badge/Language-English-blue)](./README.md)
+[![Chinese version](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
+[![English version](https://img.shields.io/badge/Language-English-blue)](./README.md)
 
 ## 目录
 
@@ -47,6 +47,8 @@ MATLAB 的主要特点就是其强大的矩阵计算能力及仿真能力。学�
 ## 作者
 
 **陶宏** ，电子科学与技术专业学生，就读于 [**桂林电子科技大学**](http://www.guet.edu.cn/) ，现任桂林电子科技大学共青团新媒体联盟工作室（青春桂电）运营部微信公众平台负责人，曾是桂林电子科技大学信息与通信学院新媒体中心技术部前端工程师。 
+
+https://taohongmaxwell.github.io/
 
 ## 反馈
 

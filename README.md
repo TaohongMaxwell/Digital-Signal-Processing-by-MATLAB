@@ -2,10 +2,10 @@
 
 A computer method by MATLAB
 
-![](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)
+[![Maxwell Blog](https://img.shields.io/badge/Author-Maxwell%20Tao-lightgrey)](https://taohongmaxwell.github.io/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TaohongMaxwell/Digital-Signal-Processing/edit/master/LICENSE)
-[![](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
-[![](https://img.shields.io/badge/Language-English-blue)](./README.md)
+[![Chinese version](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
+[![English version](https://img.shields.io/badge/Language-English-blue)](./README.md)
 
 ## Contenets
 
