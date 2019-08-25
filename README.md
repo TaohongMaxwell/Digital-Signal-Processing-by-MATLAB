@@ -7,6 +7,8 @@ A computer method by MATLAB
 [![Chinese version](https://img.shields.io/badge/Language-Chinese-red)](./README_Chinese.md) 
 [![English version](https://img.shields.io/badge/Language-English-blue)](./README.md)
 
+[TOC]
+
 ## Contenets
 
 - [Introduction](#Introduction)
