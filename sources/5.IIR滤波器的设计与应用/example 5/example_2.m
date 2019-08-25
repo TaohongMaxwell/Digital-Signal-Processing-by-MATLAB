@@ -16,4 +16,4 @@ plot(w,abs(h));grid on;
 xlabel('wp=100  ws=300');
 title('Êý×ÖµÍÍ¨ÂË²¨Æ÷');
 
-prove;
+prove; % Prove that this filter work correctly

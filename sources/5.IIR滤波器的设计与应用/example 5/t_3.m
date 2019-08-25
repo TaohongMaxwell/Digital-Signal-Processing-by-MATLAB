@@ -18,4 +18,5 @@ was=tan(ws/2);
 plot(w,abs(h));grid on;
 xlabel('wp=0.2\pi ws=0.3\pi');
 title('µÍÍ¨Êý×ÖÂË²¨Æ÷');
+
 prove;

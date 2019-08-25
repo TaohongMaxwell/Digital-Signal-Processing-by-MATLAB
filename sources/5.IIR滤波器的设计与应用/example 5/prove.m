@@ -1,14 +1,19 @@
+%% Given 2 sequence
 t=0:.1:100;
 w1=.1*pi;
 w2=1*pi;
 x1=cos(2*pi*w1*t);
 x2=cos(2*pi*w2*t);
+
+%% Structure a new sequence by added that two sequences
 x=x1+x2;
 y=filter(bz,az,x);
 
+% Turn to Time domain
 fx1=freqz(x1); fx2=freqz(x2);
 fx=freqz(x); fy=freqz(y);
 
+%% Figures part
 figure;impz(bz);
 
 figure;
