@@ -28,13 +28,13 @@ The FIR low-pass filter designed with a rectangular window, the amplitude functi
 
 Its frequency response and amplitude response are:
 
-That's `w=boxcar(N)` function in matlab, where N is the length of the window function
+That's `w=boxcar(N)` function in MATLAB, where N is the length of the window function
 
 #### (b) Bartlett Window
 
 Its frequency response is:
 
-That's `w=triang(N)` function in matlab, where N is the length of the window function
+That's `w=triang(N)` function in MATLAB, where N is the length of the window function
 
 #### (c) Hanning window,
 
@@ -42,7 +42,7 @@ also known as the raised cosine window
 
 Its frequency response and amplitude response are:
 
-That's `w=hanning(N)` function in matlab, where N is the length of the window function
+That's `w=hanning(N)` function in MATLAB, where N is the length of the window function
 
 #### (d) Hamming window,
 
@@ -50,7 +50,7 @@ also known as the improved raised cosine window
 
 The magnitude response is:
 
-That's `w=hamming(N)` function in matlab, where N is the length of the window function
+That's `w=hamming(N)` function in MATLAB, where N is the length of the window function
 
 #### (e) Blankman window,
 
@@ -58,13 +58,13 @@ also known as second-order raised cosine window
 
 The magnitude response is:
 
-That's `w=blackman(N)` function in matlab, where N is the length of the window function
+That's `w=blackman(N)` function in MATLAB, where N is the length of the window function
 
 #### (f) Kaiser window
 
 Where: β is an optional parameter used to select the exchange relationship between the main lobe width and the side lobe attenuation. In general, the larger β, the wider the transition band, and the smaller the stop band, the greater the attenuation. I0(·) is the first type of modified zero-order Bessel function.
 
-That's `w=kaiser(N,beta)` in matlab, function N is the length of the window function, and beta is the parameter of the window function.
+That's `w=kaiser(N,beta)` in MATLAB, function N is the length of the window function, and beta is the parameter of the window function.
 
 ### The specific steps of designing the FIR filter using the window function are as follows:
 
