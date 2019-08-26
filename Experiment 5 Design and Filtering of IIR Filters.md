@@ -47,7 +47,7 @@ An analog Butterwater low-pass filter was designed with 1 dB or better fluctuati
 
 MATLAB reference program:
 
-`example_1.m`
+[`example_1.m`](./sources/5.IIR滤波器的设计与应用/code5/example_1.m)
 
 ```matlab
 clc;clf;clear;
@@ -83,7 +83,7 @@ grid on;
 
 Butterworth analog filter design subroutine:
 
-`afd_butt.m`
+[`afd_butt.m`](./sources/5.IIR滤波器的设计与应用/code5/afd_butt.m)
 
 ```matlab
 Function[b,a]=afd_butt(Wp,Ws,Rp,As);
@@ -103,7 +103,7 @@ OmegaC=Wp/((10^(Rp/10)-1)^(1/(2*N))));
 
 Design non-normalized Butterworth analog low-pass filter prototype subroutine:
 
-`u_butapp.m`
+[`u_buttpp.m`](./sources/5.IIR滤波器的设计与应用/code5/u_buttap.m)
 
 ```matlab
 Function [b,a]=u_buttap(N,OmegaC);
@@ -118,7 +118,7 @@ a=real(poly(p)); denominator vector
 
 Calculate system function amplitude response and phase response subroutine:
 
-`freqs_m.m`
+[`freqs_m.m`](./sources/5.IIR滤波器的设计与应用/code5/freqs_m.m)
 
 ```matlab
 Function [db,mag,pha,w]=freqs_m(b,a,wmax);
@@ -134,6 +134,8 @@ Pha=angle(H);
 A digital low pass filter designed as follows.
 
 The corresponding MATLAB program is as follows:
+
+[`example_2.m`](./sources/5.IIR滤波器的设计与应用/code5/example_2.m)
 
 ```matlab
 clc;clf;clear;close all;
@@ -168,7 +170,7 @@ az=[1,-1.143,0.4128]
 
 Prove that this filter works correctly:
 
-`prove.m`
+[`prove.m`](./sources/5.IIR滤波器的设计与应用/code5/prove.m)
 
 ```matlab
 %% Given 2 sequence
@@ -209,7 +211,7 @@ subplot(4,2,8);
 plot(abs(fy));title('Y');
 ```
 
-This program works with later programmes to prove if the filter we created goes wrong.
+The [`prove.m`](./sources/5.IIR滤波器的设计与应用/code5/prove.m) program works with later programs to prove if the filter we created goes wrong.
 
 ## Introduction to experiment with MATLAB function
 
@@ -241,7 +243,7 @@ In the formula, B and A are the coefficient vectors of the numerator and denomin
 
 Example like that:
 
-`t_3.m`
+[`t_3.m`](./sources/5.IIR滤波器的设计与应用/code5/t_3.m)
 
 ```matlab
 clc;clear;close all;
@@ -268,7 +270,7 @@ prove;
 
 Example like that:
 
-`t_4.m`
+[`t_4.m`](./sources/5.IIR滤波器的设计与应用/code5/t_4.m)
 
 ```matlab
 clc;clear;close all;
