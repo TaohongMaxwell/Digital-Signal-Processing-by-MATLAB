@@ -64,4 +64,4 @@ A discrete signal x of length 100 is known, consisting mainly of signals of thre
 
 ## Reference programme
 
-see here: [`main.m`](./sources/7.综合实验/example%207/main.m)
+see here: [`main.m`](./sources/7.综合实验/code7/main.m)

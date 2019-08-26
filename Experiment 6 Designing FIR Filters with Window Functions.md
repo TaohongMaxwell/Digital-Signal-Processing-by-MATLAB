@@ -95,7 +95,7 @@ According to the requirements of the filter, the stopband attenuation is not les
 
 FIR filter based on window function:
 
-[`example_1.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\example_1.m)
+[`example_1.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/example_1.m)
 
 ```matlab
 clc;clear;close all;
@@ -120,7 +120,7 @@ Freqz(b,1,512)
 
 We also can write a programme to prove if this filter work correctly,  see:
 
-[`prove_1.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\prove_1.m)
+[`prove_1.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/prove_1.m)
 
 The experimental results are shown in the figure:
 
@@ -142,7 +142,7 @@ It is required to design a multi-band filter: its amplitude response is 0 at 0 t
 
 Multi-band filter design:
 
-[`example_2.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\example_2.m)
+[`example_2.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/example_2.m)
 
 ```matlab
 f=[0 0.125 0.125 0.250 0.250 0.500 0.500 0.750 0.750 1.00];
@@ -156,7 +156,7 @@ Legend('‘Ideal Filter', 'Design Filter');
 
 We also can write a programme to prove if this filter work correctly,  see:
 
-[`prove_2.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\prove_2.m)
+[`prove_2.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/prove_2.m)
 
 ## Filter Design & Analysis Tools
 
@@ -180,7 +180,7 @@ When the FIR filter is designed by window method, the length of the window affec
 
 2. Using a window function method to design a linear phase FIR low-pass filter, the performance indicators are: passband cutoff frequency is 0.2π, band stop cutoff frequency is 0.3π, stopband attenuation is not less than 40dB, passband attenuation is not more than 3dB . Write a program implementation and draw graphics.
 
-[`t_2.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\t_2.m)
+[`t_2.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/t_2.m)
 
 ```matlab
 clc;clear;close all;
@@ -206,7 +206,7 @@ prove_t_2;
 
 3. Design a band-stop filter with a band resistance of 0.4 to 0.65 and an order of 34, and use a Chebyshev window and compare it with the default window function.
 
-[`t_3.m`](sources\6.用窗函数设计FIR滤波器及其应用\example%206\t_3.m)
+[`t_3.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/t_3.m)
 
 ```matlab
 clc;clear;close all;
