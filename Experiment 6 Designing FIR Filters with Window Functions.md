@@ -136,7 +136,7 @@ Fir2 function usage: `b=fir2(n,f,m,npt,lap,window)`
 
 n is the order of the designed filter; f is a positive vector of 0 to 1, corresponding to the frequency of the filter, where 0 corresponds to frequency 0, 1 corresponds to half of the signal sampling frequency; m is a positive real number of all elements Vector, corresponding to the amplitude of the frequency point in the m vector; window is the window function, fir2 defaults to the Hamming window; npt defaults to 512; lap defaults to 25; b is the length of the designed filter coefficients Vector of n+1.
 
-It is required to design a multi-band filter: its amplitude response is 0 at 0 to pi/8, 1/2 at pi/8 to 2pi/8, and 1/4 at 2pi/8 to 4pi/8. The amplitude response is 1/6 at 4pi/8 to 6pi/8, 1/8 at 6pi/8 to pi, and the order of the filter is 60. Draw the ideal filter and compare the amplitude and frequency response of the designed filter.
+It is required to design a multi-band filter: its amplitude response is 0 at 0 to $\frac \pi 8$,  1/2 at $\frac {\pi} 8$ to $\frac {2\pi} 8$, and 1/4 at $\frac {2\pi} 8$ to $\frac {4\pi} 8$. The amplitude response is 1/6 at $\frac {4\pi} 8$ to $\frac {6\pi} 8$, 1/8 at $\frac {6\pi} 8$ to $\pi$, and the order of the filter is 60. Draw the ideal filter and compare the amplitude and frequency response of the designed filter.
 
 **reference:**
 
