@@ -1,3 +1,5 @@
+clc;clear;close all; % I'm not Object-C
+
 n1=1:5; x1=[1 0.7 0.4 0.1 0];
 n2=3:8; x2=[0.1 0.3 0.5 0.7 0.9 1];
 
