@@ -20,11 +20,13 @@ MATLAB provides a rich and powerful calculation function and graph analysis func
 
 ### (2) Frequency domain analysis of signals
 
-The signal processing course mainly studies the frequency domain analysis method and implementation of discrete signals and systems, as well as the design and implementation of filters. The frequency domain analysis of discrete signals and systems includes DTFT, DFT, Z transform, etc. FFT is a fast implementation of DFT. The spectrum of the signal can be analyzed by MATLAB using the freqz function or the FFT function.
+The signal processing course mainly studies the frequency domain analysis method and implementation of discrete signals and systems, as well as the design and implementation of filters. The frequency domain analysis of discrete signals and systems includes DTFT, DFT, Z transform, etc. FFT is a fast implementation of DFT. The spectrum of the signal can be analyzed by MATLAB using the `freqz` function or the `FFT` function.
 
 ### (3) Filter design
 
-The design of the filter first determines the type of filter, ie low pass, high pass, band pass or band stop. The edge frequency of the filter can be obtained by spectral analysis of the signal. The amplitude index of the filter mainly includes the minimum attenuation of the stopband As and the maximum attenuation of the passband Ap. In general, the larger As, the greater the attenuation of the frequency component that passes through; the smaller the Ap, the smaller the attenuation of the frequency component that needs to be retained. Therefore, the larger As, the smaller the Ap, the better the performance of the filter, but the larger the order of the filter, the greater the cost of implementation (including computation time and space). Thus, the design of the filter requires a balanced consideration of filter performance and implementation cost.
+The design of the filter first determines the type of filter, ie low pass, high pass, band pass or band stop. The edge frequency of the filter can be obtained by spectral analysis of the signal. The amplitude index of the filter mainly includes the minimum attenuation of the stopband As and the maximum attenuation of the passband Ap.
+
+In general, the larger As, the greater the attenuation of the frequency component that passes through; the smaller the Ap, the smaller the attenuation of the frequency component that needs to be retained. Therefore, the larger As, the smaller the Ap and the better the performance of the filter. But then, the larger the order of the filter, the greater the cost of implementation (including computation time and space). Thus, the design of the filter requires a balanced consideration of filter performance and implementation cost.
 
 In addition, according to the length of the impulse response, it can be divided into two types, IIR and FIR. Both types of filters have their own characteristics. A FIR filter can be used to design a filter with a strict linear phase, but the FIR filter has a higher order than the IIR filter, while satisfying the same specifications. MATLAB provides a rich set of functions for the design of various types of filters, which can be used to easily design a filter that meets the requirements.
 
@@ -44,7 +46,7 @@ A discrete signal `x` of length 100 is known, consisting mainly of signals of th
 
 5. The filtering results are analyzed, the filter parameters and design methods are adjusted, and the filtering results are optimized.
 
-6. Different filters are used to filter out the signals of the same frequency component, and the results of the filtering and the performance of the different filters are compared. (optional)
+6. Use different filters to filter out the same frequency component and compare the filtered results with the performance of the different filters. (optional)
 
 ## Experimental report requirements
 
@@ -62,6 +64,7 @@ A discrete signal `x` of length 100 is known, consisting mainly of signals of th
 
 7. A summary of the experience of this experiment, as well as a summary of the experiments on the signal processing course.
 
-## Reference programme
+## Reference program
 
 See here: [`main.m`](./sources/7.综合实验/code7/main.m)
+

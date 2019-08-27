@@ -10,67 +10,110 @@
 
 ## Experimental principle
 
-There are three main methods for designing FIR filters: window function method, frequency sampling method, and Chebyshev. The FIR filter is designed to seek a system function that approximates its frequency response to the ideal frequency response required by the filter, which corresponds to the unit impulse response.
+The FIR filter is designed to find a system function $H(z)$ whose frequency response $H(e^{jw})$ approximates the ideal frequency response required by the filter, and its corresponding unit impulse response $h_d(n)$.
 
-### Basic method of designing FIR filter by window function
+### (1)Basic method of designing FIR filter by window function
 
-In the time domain, a window function is used to intercept the ideal one, and the finite length sequence is approximated to approximate the ideal; in the frequency domain, the ideal one is sampled at the equi-angle of the unit circle to obtain h(k), and h(k) is used to obtain H(z). Will approximate the ideal Hd(z).
+In the time domain, a window function is used to intercept the ideal $h_d(n)$ to obtain $h(n)$, and the finite-length sequence $h(n)$ approximates the ideal $h_d(n)$. In the frequency domain, the ideal $H_d(e^{jw})$ is sampled at the same angle on the unit circle to obtain $h(k)$. According to $h(k)$, $H(z)$ will approximate the ideal $H_d(z)$.
 
-Let the ideal impulse's unit impulse response be . Take the low-pass linear phase FIR digital filter as an example.
+Let the ideal impulse's unit impulse response $H_d(e^{jw})$ be $h_d(n)$. Take the low-pass linear phase FIR digital filter as an example.
+$$
+H_{d}\left(e^{j \omega}\right)=\sum_{n=-\infty}^{\infty} h_{d}(n) e^{-j n \omega}
+$$
+$$
+h_{d}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} H_{d}\left(e^{j \omega}\right) e^{j n \omega} d \omega
+$$
+In general $h_d(n)$ is infinitely long, non-causal and cannot be directly used as the unit impulse response of the FIR filter. To get a causal finite-length filter $h(n)$, the most straightforward method is to truncate $h(n) = h_d(n) w(n)$. That is, intercept the finite-length causal sequence and weight it with the appropriate window function. As the unit impulse response of the FIR filter, the center of symmetry must be equal to the delay constant of the filter, ie:
+$$
+\left\{\begin{array}{l}{h(n)=h_{d}(n) w(n)} \\ {a=(N-1) / 2}\end{array}\right.
+$$
+The FIR low-pass filter designed with a rectangular window, the amplitude function of the designed filter exhibits oscillation in both the passband and the stopband, and the maximum ripple is about 9% of the amplitude (the phenomenon is called Gibbs effect).
 
-Generally infinitely long, non-causal, cannot be directly used as the unit impulse response of the FIR filter. To get a causal finite-length filter h(n), the most straightforward method is truncation, that is, truncation into a finite-length causal sequence, and weighting with a suitable window function as the unit impulse response of the FIR filter. According to the requirements of the linear phase filter, h(n) must be even symmetric. The center of symmetry must be equal to the delay constant of the filter, ie
-
-The FIR low-pass filter designed with a rectangular window, the amplitude function of the designed filter exhibits oscillation in both the passband and the stopband, and the maximum ripple is about 9% of the amplitude (the phenomenon is called Gibbs). effect).
-
-### Typical window function
+### (2)Typical window function
 
 #### (a) Rectangle Window
 
+$w(n) = R_n(n)$
+
 Its frequency response and amplitude response are:
 
-That's `w=boxcar(N)` function in MATLAB, where N is the length of the window function
+$$
+W\left(e^{j \omega}\right)=\frac{\sin (N \omega / 2)}{\sin (\omega / 2)} e^{-j \omega \frac{N-1}{2}}
+$$
+and
+$$
+W_{R}(\omega)=\frac{\sin (N \omega / 2)}{\sin (\omega / 2)}
+$$
+
+That's `w=boxcar(N)` function in MATLAB, where N is the length of the window function.
 
 #### (b) Bartlett Window
 
+$w(n)=\left\{\begin{array}{cc}{\frac{2 n}{N-1},} & {0 \leq n \leq \frac{N-1}{2}} \\ {2-\frac{2 n}{N-1},} & {\frac{N-1}{2}<n \leq N-1}\end{array}\right.$
+
 Its frequency response is:
 
-That's `w=triang(N)` function in MATLAB, where N is the length of the window function
+$$
+W\left(e^{j \omega}\right)=\frac{2}{N}\left[\frac{\sin (N \omega / 4)}{\sin (\omega / 2)}\right]^{2} e^{-j \omega \frac{N-1}{2}}
+$$
 
-#### (c) Hanning window,
+That's `w=triang(N)` function in MATLAB, where N is the length of the window function.
 
-also known as the raised cosine window
+#### (c) Hanning window
+
+Also known as the raised cosine window.
+
+$w(n)=\frac{1}{2}\left[1-\cos \left(\frac{2 n \pi}{N-1}\right)\right] R_{N}(n)$
 
 Its frequency response and amplitude response are:
 
-That's `w=hanning(N)` function in MATLAB, where N is the length of the window function
+$$
+\begin{aligned} W\left(e^{j \omega}\right) &=\left\{0.5 W_{R}(\omega)+0.25\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]\right\} e^{-j\left(\frac{N-1}{2}\right) \omega}=W(\omega) e^{-j \omega a} \end{aligned}
+$$
+and
+$$
+W(\omega)=0.5 W_{R}(\omega)+0.25\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]
+$$
 
-#### (d) Hamming window,
+That's `w=hanning(N)` function in MATLAB, where N is the length of the window function.
 
-also known as the improved raised cosine window
+#### (d) Hamming window
+
+Also known as the improved raised cosine window.
+
+$w(n)=\left[ 0.54 - 0.46 \cos \left(\frac{2 n \pi}{N-1}\right)\right] R_{N}(n)$
 
 The magnitude response is:
+$$
+W(\omega)=0.54 W_{R}(\omega)+0.23\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]
+$$
+That's `w=hamming(N)` function in MATLAB, where N is the length of the window function.
 
-That's `w=hamming(N)` function in MATLAB, where N is the length of the window function
+#### (e) Blankman window
 
-#### (e) Blankman window,
+Also known as second-order raised cosine window.
 
-also known as second-order raised cosine window
+$w(n)=\left[ 0.42 - 0.5 \cos \left(\frac{2 n \pi}{N-1}\right) + 0.08\cos \left(\frac{4 n \pi}{N-1}\right) \right] R_{N}(n)$
 
 The magnitude response is:
-
-That's `w=blackman(N)` function in MATLAB, where N is the length of the window function
+$$
+\begin{aligned} W(\omega)=& 0.42 W_{R}(\omega)+0.25\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]+0.04\left[W_{R}\left(\omega-\frac{4 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{4 \pi}{N-1}\right)\right] \end{aligned}
+$$
+That's `w=blackman(N)` function in MATLAB, where N is the length of the window function.
 
 #### (f) Kaiser window
 
-Where: β is an optional parameter used to select the exchange relationship between the main lobe width and the side lobe attenuation. In general, the larger β, the wider the transition band, and the smaller the stop band, the greater the attenuation. I0(·) is the first type of modified zero-order Bessel function.
+$w(n)=\frac{I_{0}(\beta \sqrt{1-[1-2 n /(N-1)]^{2}})}{I_{0}(\beta)}, 0 \leq n \leq N-1$
+
+Where: β is an optional parameter used to select the exchange relationship between the main lobe width and the side lobe attenuation. In general, the larger β, the wider the transition band, and the smaller the stop band, the greater the attenuation. $I_0(·)$ is the first type of modified zero-order Bessel function.
 
 That's `w=kaiser(N,beta)` in MATLAB, function N is the length of the window function, and beta is the parameter of the window function.
 
-### The specific steps of designing the FIR filter using the window function are as follows:
+### (3)The specific steps of designing the FIR filter using the window function are as follows:
 
 1. According to the specific performance requirements, select the appropriate window function by analyzing the parameters such as the transition band width Δω and the stopband attenuation A~S~, and estimate the length N of the filter.
-2. Find the ideal unit impulse response from the amplitude-frequency response parameters of the given filter.
-3. Determine the delay value and calculate the unit sampling response of the filter.
+2. The ideal unit impulse response $h_d(n)$ is found from the amplitude-frequency response parameter of a given filter.
+3. Determine the delay value and calculate the unit sampling response $h(n)$ of the filter, $h(n)=h_d(n)w(n)$.
 4. Verify that the technical indicators meet the requirements. Analyze the amplitude-frequency characteristics of the designed filter.
 
 ## Experimental content and its steps
@@ -83,11 +126,11 @@ That's `w=kaiser(N,beta)` in MATLAB, function N is the length of the window func
 
 ### Example 1:
 
-Use fir1 to design a standard frequency response FIR filter, including low pass, band pass, high pass, band stop and other types of filters.
+Use `fir1` to design a standard frequency response FIR filter, including low pass, band pass, high pass, band stop and other types of filters.
 
 `b=fir1(n, Wn, ‘ftype’)`
 
-The passband boundary frequency, the stopband boundary frequency, the stopband attenuation is not less than 40dB, and the passband ripple is not more than 3dB.
+The passband boundary frequency $\omega_p=0.5\pi$, the stopband boundary frequency$\omega_s=0.66\pi$, the stopband attenuation is not less than 40dB, and the passband ripple is not more than 3dB.
 
 **Reference:** 
 
@@ -118,7 +161,7 @@ Freqz(b,1,512)
 % The numerator is b and the denominator is 1
 ```
 
-We also can write a programme to prove if this filter work correctly,  see:
+We also can write a program to prove if this filter work correctly,  see
 
 [`prove_1.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/prove_1.m)
 
@@ -128,11 +171,11 @@ The experimental results are shown in the figure:
 
 ### Example 2:
 
-Fir2 design digital filter with arbitrary response
+Use `fir2` to design digital filter with arbitrary response. The amplitude frequency response of the filter has different amplitude values in different frequency bands.
 
-The amplitude frequency response of the filter has different amplitude values in different frequency bands.
+The `fir2` function usage:
 
-Fir2 function usage: `b=fir2(n,f,m,npt,lap,window)`
+`b=fir2(n,f,m,npt,lap,window)`
 
 n is the order of the designed filter; f is a positive vector of 0 to 1, corresponding to the frequency of the filter, where 0 corresponds to frequency 0, 1 corresponds to half of the signal sampling frequency; m is a positive real number of all elements Vector, corresponding to the amplitude of the frequency point in the m vector; window is the window function, fir2 defaults to the Hamming window; npt defaults to 512; lap defaults to 25; b is the length of the designed filter coefficients Vector of n+1.
 
@@ -154,7 +197,7 @@ Grid on;
 Legend('‘Ideal Filter', 'Design Filter');
 ```
 
-We also can write a programme to prove if this filter work correctly,  see:
+We also can write a programme to prove if this filter work correctly,  see
 
 [`prove_2.m`](./sources/6.用窗函数设计FIR滤波器及其应用/code6/prove_2.m)
 
