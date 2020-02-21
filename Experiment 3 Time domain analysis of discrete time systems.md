@@ -39,7 +39,7 @@ A simple reference for a nonlinear discrete-time system:
 **(3) Simulation reference for time-invariant and time-varying systems:**
 % Generate the input sequences
 
-## Thinking questions
+## Question to think about:
 
 1. What are the characteristics of discrete time systems?
 2. Summarize the conclusions obtained during the experiment and analyze them.

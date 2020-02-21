@@ -219,12 +219,12 @@ During the experiment, the MATLAB function commands have digital filter function
 
 In the formula, Wp and Ws respectively cut off the cutoff frequency of the passband and the stopband. In fact, they are normalized frequencies, and their values are between 0 and 1. Rp and Rs are the attenuation of the passband and the stopband, respectively. . N is the order of the corresponding low-pass filter found, Wn is the obtained 3dB frequency, and the unit of the second equation is rad/s, so they are actually frequencies.
 
-Used to design an analog low-pass prototype filter whose calling format is [z,p,k]=buttap(N) N is the order of the low-pass prototype filter to be designed, and z, p, and k are designed respectively. The pole, zero and gain.
+Used to design an analog low-pass prototype filter whose calling format is `[z,p,k]=buttap(N)`. N is the order of the low-pass prototype filter to be designed, and z, p, and k are designed respectively. The pole, zero and gain.
 
 The following four files are used to convert the analog low-pass prototype filters into low-pass, high-pass, band-pass, and band-stop filters, respectively. The calling format is
 
 - (1) `[B,A]=lp2lp(b,a,Wo)` or `[B,A]=lp2hp(b,a,Wo)`
-- (2) `[B, A] = lp2bp (b, a, Wo, Bw)` or `[B, A] = lp2bs (b, a, Wo, Bw)`
+- (2) `[B,A]=lp2bp(b,a,Wo,Bw)` or `[B,A]=lp2bs(b,a,Wo,Bw)`
 
 Where b, a are the coefficient vectors of the numerator and denominator polynomial of the simulated low-pass prototype filter, respectively, B and A are the coefficient vectors of the transformed numerator and denominator polynomial respectively; in the format (1), Wo is the low pass Or the cutoff frequency of the high pass filter; in the format (2) Wo is the center frequency of the band pass or band stop filter, and Bw is its bandwidth.
 
@@ -234,9 +234,9 @@ A bilinear transformation is achieved, ie a digital filter is obtained from an a
 
 In the formula, B and A are the coefficient vectors of the numerator and denominator polynomial respectively; Bz and Az are the coefficient vectors of the numerator and denominator polynomial respectively, and Fs is the sampling frequency.
 
-## Thinking question
+## Question to think about:
 
-1. IIR filter design steps.
+1. Description IIR filter design steps.
 2. Analyze the problems involved in the experiment, try to compile and modify the corresponding procedures, and get the final correct results and waveforms, and analyze and analyze the experimental reports.
 
 3. Design a low-pass digital filter by bilinear method requires an amplitude error of less than 1 dB when the band in the passband is below 0.2 π rad. The stopband attenuation between the frequencies from 0.3 π rad to π rad is greater than 15 dB, T = 1, and the analog filter uses the Butterworth filter prototype.

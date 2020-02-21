@@ -19,17 +19,23 @@ In the time domain, a window function is used to intercept the ideal $h_d(n)$ to
 Let the ideal impulse's unit impulse response $H_d(e^{jw})$ be $h_d(n)$. Take the low-pass linear phase FIR digital filter as an example.
 
 $$
+\begin{equation}
 H_{d}\left(e^{j \omega}\right)=\sum_{n=-\infty}^{\infty} h_{d}(n) e^{-j n \omega}
+\end{equation}
 $$
 
 $$
+\begin{equation}
 h_{d}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} H_{d}\left(e^{j \omega}\right) e^{j n \omega} d \omega
+\end{equation}
 $$
 
 In general $h_d(n)$ is infinitely long, non-causal and cannot be directly used as the unit impulse response of the FIR filter. To get a causal finite-length filter $h(n)$, the most straightforward method is to truncate $h(n) = h_d(n) w(n)$. That is, intercept the finite-length causal sequence and weight it with the appropriate window function. As the unit impulse response of the FIR filter, the center of symmetry must be equal to the delay constant of the filter, ie:
 
 $$
+\begin{equation}
 \left\{\begin{array}{l}{h(n)=h_{d}(n) w(n)} \\ {a=(N-1) / 2}\end{array}\right.
+\end{equation}
 $$
 
 The FIR low-pass filter designed with a rectangular window, the amplitude function of the designed filter exhibits oscillation in both the passband and the stopband, and the maximum ripple is about 9% of the amplitude (the phenomenon is called Gibbs effect).
@@ -43,13 +49,17 @@ $w(n) = R_n(n)$
 Its frequency response and amplitude response are:
 
 $$
+\begin{equation}
 W\left(e^{j \omega}\right)=\frac{\sin (N \omega / 2)}{\sin (\omega / 2)} e^{-j \omega \frac{N-1}{2}}
+\end{equation}
 $$
 
 and
 
 $$
+\begin{equation}
 W_{R}(\omega)=\frac{\sin (N \omega / 2)}{\sin (\omega / 2)}
+\end{equation}
 $$
 
 That's `w=boxcar(N)` function in MATLAB, where N is the length of the window function.
@@ -61,7 +71,9 @@ $w(n)=\left\{\begin{array}{cc}{\frac{2 n}{N-1},} & {0 \leq n \leq \frac{N-1}{2}}
 Its frequency response is:
 
 $$
+\begin{equation}
 W\left(e^{j \omega}\right)=\frac{2}{N}\left[\frac{\sin (N \omega / 4)}{\sin (\omega / 2)}\right]^{2} e^{-j \omega \frac{N-1}{2}}
+\end{equation}
 $$
 
 That's `w=triang(N)` function in MATLAB, where N is the length of the window function.
@@ -75,13 +87,17 @@ $w(n)=\frac{1}{2}\left[1-\cos \left(\frac{2 n \pi}{N-1}\right)\right] R_{N}(n)$
 Its frequency response and amplitude response are:
 
 $$
+\begin{equation}
 \begin{aligned} W\left(e^{j \omega}\right) &=\left\{0.5 W_{R}(\omega)+0.25\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]\right\} e^{-j\left(\frac{N-1}{2}\right) \omega}=W(\omega) e^{-j \omega a} \end{aligned}
+\end{equation}
 $$
 
 and
 
 $$
+\begin{equation}
 W(\omega)=0.5 W_{R}(\omega)+0.25\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]
+\end{equation}
 $$
 
 That's `w=hanning(N)` function in MATLAB, where N is the length of the window function.
@@ -95,7 +111,9 @@ $w(n)=\left[ 0.54 - 0.46 \cos \left(\frac{2 n \pi}{N-1}\right)\right] R_{N}(n)$
 The magnitude response is:
 
 $$
+\begin{equation}
 W(\omega)=0.54 W_{R}(\omega)+0.23\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]
+\end{equation}
 $$
 
 That's `w=hamming(N)` function in MATLAB, where N is the length of the window function.
@@ -109,7 +127,9 @@ $w(n)=\left[ 0.42 - 0.5 \cos \left(\frac{2 n \pi}{N-1}\right) + 0.08\cos \left(\
 The magnitude response is:
 
 $$
+\begin{equation}
 \begin{aligned} W(\omega)=& 0.42 W_{R}(\omega)+0.25\left[W_{R}\left(\omega-\frac{2 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{2 \pi}{N-1}\right)\right]+0.04\left[W_{R}\left(\omega-\frac{4 \pi}{N-1}\right)+W_{R}\left(\omega+\frac{4 \pi}{N-1}\right)\right] \end{aligned}
+\end{equation}
 $$
 
 That's `w=blackman(N)` function in MATLAB, where N is the length of the window function.
@@ -228,7 +248,7 @@ The Design Method selects the `IIR` or the `FIR` filter. The drop-down menu sele
 
 Then set the sampling frequency and cutoff frequency, then click `Design Fliter` to complete the design.
 
-## Thinking question
+## Question to think about:
 
 1. How the window length and shape affect the filter performance during the experiment.
 

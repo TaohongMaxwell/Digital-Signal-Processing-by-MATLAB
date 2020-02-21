@@ -95,7 +95,7 @@ Subplot(2,1,2);stem(n,xm);
 Title('circular shift equence');xlabel('n');ylabel('x((n+10))mod 20');
 ```
 
-## Thinking questions
+## Question to think about:
 
 1. Understand the frequency domain analysis of discrete time systems, master and deepen the understanding of the Fourier transform and its properties.
 2. Calculate a discrete time Fourier transform of the sequence $x(n)=cos(n* \frac \pi 6)$ of N=12.
