@@ -44,7 +44,7 @@ In this repository, you can browse some examples of digital signal processing us
 
 **Maxwell Tao** , an Electronic Science and Technology student study at Guilin University of Electronic Technology.
 
-Now I am one of the chelf editors in WeChat public account of the Media Department of the Youth League New Media Alliance Studio of GUET (GUET Youth, 青春桂电). I was a web engineer in the Technical Department of the New Media Center of the School of Information and Communication.
+Former  one of the editors in WeChat public account of the Media Department of the Youth League New Media Alliance Studio of GUET. Web engineer in the Technical Department of the New Media Center of the School of Information and Communication.
 
 [https://taohongmaxwell.github.io/](https://taohongmaxwell.github.io/)
 
