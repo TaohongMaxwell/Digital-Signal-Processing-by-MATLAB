@@ -72,5 +72,5 @@ ylabel('·ù¶È£¨½ØÖÁ4500£©');
 axis([0 5*1000 0 4500]);
 grid on;
 
-sound(y_z,fs);
-pause(21);
+% sound(y_z,fs);
+% pause(21);
